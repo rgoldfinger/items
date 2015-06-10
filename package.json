@@ -1,0 +1,42 @@
+{
+  "name": "item",
+  "version": "0.0.0",
+  "devDependencies": {
+    "jest-cli": "^0.4.0",
+    "webpack": "^1.7.3",
+    "webpack-dev-server": "^1.6.5",
+    "jsx-loader": "*",
+    "stylus-loader": "^1.0.0",
+    "style-loader": "^0.9.0",
+    "css-loader": "^0.9.1"
+  },
+  "description": "item demo",
+  "dependencies": {
+    "es6-promise": "^2.0.1",
+    "object-assign": "^2.0.0",
+    "ramda": "^0.13.0",
+    "react": "~0.13.0",
+    "react-router": "~0.13.2",
+    "sockjs-client": "^1.0.0-beta.12"
+  },
+  "scripts": {
+    "test": "jest",
+    "serve": "webpack-dev-server --content-base public/ --hot -d",
+  },
+  "jest": {
+    "testFileExtensions": [
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "unmockedModulePathPatterns": [
+      "react",
+      "es6-promise",
+      "ramda",
+      "react-router"
+    ]
+  },
+  "author": "Roger Goldfinger",
+}
