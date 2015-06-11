@@ -1,0 +1,590 @@
+/*
+Box Layouts
+
+This is a collection of different box based layouts for contents. Box based layouts are laying items out in a container.
+These are not used for overall page layouts nor is it a substitute for a grid system
+These can however live within any grid system.
+
+The first several options (6.1 through 6.5) are based on CSS3 Flexbox layout. The last option (6.6) can be applied
+to any block level container  and does not necessarily have to be a Flexbox container.
+
+Flexbox based layouts information:
+This is based on CSS3 Flexbox. This is NOT intended for layouts for pages.
+This is  useful for placing contents in the page in boxes (horizontal or vertical). This offers 12 column widths.
+What that means is that it offers you 12 progressing column sizes for the content.
+Flex-1 being the smallest.
+It has IE10+ support.
+
+To use these styles, please include
+/web/static/bundles/styleguide/learnerApp/boxLayouts.styl
+or fetch the entire styleguide bundle by including this file
+/web/static/bundles/styleguide/index.styl
+
+Styleguide 6
+*/
+
+/*
+Horizontal Box Layouts (Flexbox)
+
+Styleguide 6.1
+*/
+
+box()
+  display -webkit-box   /* OLD Safari,  iOS, Android browser, older WebKit browsers.  */
+  display -moz-box      /* OLD Firefox (buggy) */
+  display -ms-flexbox   /* MID IE 10 */
+  display -webkit-flex  /* NEW, Chrome 21+ */
+  display flex         /* NEW Opera 12.1, Firefox 22+ */
+
+horizontal-spacebetween-box()
+  -webkit-box-pack space-between
+  -moz-box-pack space-between
+  -ms-flex-pack justify
+  -webkit-justify-content space-between
+  justify-content space-between
+  -webkit-box-align center
+  -moz-box-align center
+  -ms-flex-align center
+  -webkit-align-items center
+  align-items center
+
+horizontal-spacearound-box()
+  -webkit-box-pack space-around
+  -moz-box-pack space-around
+  -ms-flex-pack distribute
+  -webkit-justify-content space-around
+  justify-content space-around
+  -webkit-box-align center
+  -moz-box-align center
+  -ms-flex-align center
+  -webkit-align-items center
+  align-items center
+
+wrap()
+  -ms-flex-wrap wrap
+  -webkit-flex-wrap wrap
+  flex-wrap wrap
+
+.align-items-absolute-center
+  -webkit-box-pack center
+  -moz-box-pack center
+  -ms-flex-pack center
+  -webkit-justify-content center
+  justify-content center
+  -webkit-box-align center
+  -moz-box-align center
+  -ms-flex-align center
+  -webkit-align-items center
+  align-items center
+
+.align-items-vertical-center
+  -webkit-box-align center
+  -moz-box-align center
+  -ms-flex-align center
+  -webkit-align-items center
+  align-items center
+
+.align-items-top
+  align-items flex-start
+  -ms-align-items flex-start
+  -moz-align-items flex-start
+  -webkit-align-items flex-start
+  -ms-flex-align start
+
+.align-items-bottom
+  align-items flex-end
+  -ms-align-items flex-end
+  -moz-align-items flex-end
+  -webkit-align-items flex-end
+  -ms-flex-align end
+
+.align-items-right
+  justify-content flex-end
+  -webkit-box-pack flex-end
+  -moz-box-pack flex-end
+  -ms-flex-pack end
+  -webkit-justify-content flex-end
+
+.align-items-bottom-right
+  @extends .align-items-bottom
+  @extends .align-items-right
+
+.align-self-start
+  align-self flex-start
+  -ms-align-self flex-start
+  -webkit-align-self flex-start
+  -ms-flex-item-align start
+
+.align-self-end
+  align-self flex-end
+  -ms-align-self flex-end
+  -webkit-align-self flex-end
+  -ms-flex-item-align end
+
+.align-self-stretch
+  align-self stretch
+  -ms-align-self stretch
+  -webkit-align-self stretch
+  -ms-flex-item-align stretch
+
+.align-self-center
+  align-self center
+  -ms-align-self center
+  -webkit-align-self center
+  -ms-flex-item-align center
+
+.flex-1
+  flex 1
+  -webkit-flex 1
+  -moz-flex 1
+  -ms-flex 1
+
+.flex-2
+  flex 2
+  -webkit-flex 2
+  -moz-flex 2
+  -ms-flex 2
+
+.flex-3
+  flex 3
+  -webkit-flex 3
+  -moz-flex 3
+  -ms-flex 3
+
+.flex-4
+  flex 4
+  -webkit-flex 4
+  -moz-flex 4
+  -ms-flex 4
+
+.flex-5
+  flex 5
+  -webkit-flex 5
+  -moz-flex 5
+  -ms-flex 5
+
+.flex-6
+  flex 6
+  -webkit-flex 6
+  -moz-flex 6
+  -ms-flex 6
+
+.flex-7
+  flex 7
+  -webkit-flex 7
+  -moz-flex 7
+  -ms-flex 7
+
+.flex-8
+  flex 8
+  -webkit-flex 8
+  -moz-flex 8
+  -ms-flex 8
+
+.flex-9
+  flex 9
+  -webkit-flex 9
+  -moz-flex 9
+  -ms-flex 9
+
+.flex-10
+  flex 10
+  -webkit-flex 10
+  -moz-flex 10
+  -ms-flex 10
+
+.flex-11
+  flex 11
+  -webkit-flex 11
+  -moz-flex 11
+  -ms-flex 11
+
+.flex-12
+  flex 12
+  -webkit-flex 12
+  -moz-flex 12
+  -ms-flex 12
+
+/*
+  Horizontal Box
+
+  Align all items within this horizontally. All items are aligned middle along the vertical axis.
+  Please use the alignment options below for other configurations.
+
+  Markup:
+  <div class="horizontal-box" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.1
+*/
+
+.horizontal-box
+  box()
+  flex-direction row
+  -webkit-flex-direction row
+  -ms-flex-direction row
+  -moz-flex-direction row
+
+/*
+  Center Horizontal Box
+
+  Items are center on both horizontal and vertical axis
+
+  Markup:
+  <div class="horizontal-box align-items-absolute-center" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.2
+*/
+/*
+  Space between Horizontal Box
+
+  Align all items such that the empty space is equally divided between items
+
+  Markup:
+  <div class="horizontal-box align-items-spacebetween" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.3
+*/
+.horizontal-box
+  &.align-items-spacebetween
+    horizontal-spacebetween-box()
+
+/*
+  Space around Horizontal Box
+
+  Align all items such that the empty space is equally split around items and the rest of the space is used in between.
+
+  Markup:
+  <div class="horizontal-box align-items-spacearound" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.4
+*/
+.horizontal-box
+  &.align-items-spacearound
+    horizontal-spacearound-box()
+
+/*
+  Right Aligned Horizontal Box
+
+  Align all the items to the right.
+
+  Markup:
+  <div class="horizontal-box align-items-right" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.5
+*/
+
+/*
+  Top Aligned Horizontal Box
+
+  Align all the items to the top.
+
+  Markup:
+  <div class="horizontal-box align-items-top" style="background-color:#DDD; width: 95%;height:100px;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.6
+*/
+
+/*
+  Vertically Middle Aligned Horizontal Box
+
+  Align all the items to vertical middle
+
+  Markup:
+  <div class="horizontal-box align-items-vertical-center" style="background-color:#DDD; width: 95%;height:100px;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.7
+*/
+
+/*
+  Bottom Aligned Horizontal Box
+
+  Align all items to the bottom
+
+  Markup:
+  <div class="horizontal-box align-items-bottom" style="background-color:#DDD; width: 95%; height: 100px;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.8
+*/
+/*
+  Corner Aligned Horizontal Box
+
+  Align all items to the right and bottom
+
+  Markup:
+  <div class="horizontal-box align-items-bottom-right" style="background-color:#DDD; width: 95%;height:100px;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.1.9
+*/
+/*
+  Flexing Horizontal Box columns (Flexbox)
+
+  Flexible column arrangements for items within a flexbox. Each item within a flexbox can occupy more or less space compared
+  to the other items. The columns themselves are not rigid, but flexible with changing screensizes.
+  There are 12 levels of flexing available. To use it on columns, just specify class name flex-'n' n varies from 1-12.
+  Refer to examples below.
+
+  Styleguide 6.2
+*/
+/*
+  Flexing first item
+
+  First column occupies 2 columns and the others occupy just enough space.
+
+  Markup:
+  <div class="horizontal-box" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div class="flex-2" style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.2.1
+
+*/
+
+/*
+  Flexing middle item
+
+  Middle column occupies 2 columns and the others occupy just enough space.
+
+  Markup:
+  <div class="horizontal-box" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div class="flex-2" style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.2.2
+
+*/
+
+/*
+  Flexing all items
+
+  All columns specify how many flexing columns they want
+
+  Markup:
+  <div class="horizontal-box" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div class="flex-1" style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div class="flex-2" style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div class="flex-3" style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.2.3
+
+*/
+
+/*
+  Flexing with four items
+
+  All columns specify how many flexing columns they want
+
+  Markup:
+  <div class="horizontal-box" style="background-color:#DDD; width: 95%;padding:8px;">
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div class="flex-2" style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+    <div class="flex-2" style="background-color:white; padding: 8px; margin-right: 4px;"> Fourth </div>
+  </div>
+
+  Styleguide 6.2.4
+
+*/
+/*
+  Aligning individual items differently (Flexbox)
+
+  Each item specifies it's own alignments
+
+  Markup:
+  <div class="horizontal-box" style="background-color:#DDD; width: 95%;padding:8px;height:100px">
+    <div class="flex-2 align-self-start" style="background-color:white; padding: 8px; margin-right: 4px;"> First </div>
+    <div class="flex-2 align-self-center" style="background-color:white; padding: 8px; margin-right: 4px;"> Second </div>
+    <div class="flex-2 align-self-stretch" style="background-color:white; padding: 8px; margin-right: 4px;"> Third </div>
+    <div class="flex-2 align-self-end" style="background-color:white; padding: 8px; margin-right: 4px;"> Fourth </div>
+  </div>
+
+  Styleguide 6.3
+
+*/
+/*
+  Wrapping horizontal items (Flexbox)
+
+  Wraps items neatly when there are width constraints
+
+  Markup:
+  <div class="horizontal-box wrap" style="background-color:#DDD; width: 400px;padding:8px;height:100px">
+    <div style="min-width:120px;background-color:white; padding: 8px; margin-right: 4px;margin-bottom: 4px;"> First </div>
+    <div style="min-width:120px;background-color:white; padding: 8px; margin-right: 4px;margin-bottom: 4px;"> Second </div>
+    <div style="min-width:120px;background-color:white; padding: 8px; margin-right: 4px;margin-bottom: 4px;"> Third </div>
+    <div style="min-width:120px;background-color:white; padding: 8px; margin-right: 4px;margin-bottom: 4px;"> Fourth </div>
+  </div>
+
+  Styleguide 6.4
+
+*/
+.horizontal-box
+  &.wrap
+    wrap()
+
+/*
+Vertical Box Layouts (Flexbox)
+
+Styleguide 6.5
+*/
+
+/*
+  Default Vertical Box
+  Align all items within this vertically.
+
+  Markup:
+  <div class="vertical-box" style="background-color:#DDD; width: 95%;padding:8px; height: 300px;">
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.5.1
+*/
+.vertical-box
+  box()
+  flex-direction column
+  -webkit-flex-direction column
+  -ms-flex-direction column
+  -moz-flex-direction column
+
+/*
+  Center Align Vertical Box
+
+  Markup:
+  <div class="vertical-box align-items-vertical-center" style="background-color:#DDD; width: 95%;padding:8px; height: 300px;">
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.5.2
+*/
+/*
+  Absolute Center Vertical Box
+
+  Markup:
+  <div class="vertical-box align-items-absolute-center" style="background-color:#DDD; width: 95%;padding:8px; height: 300px;">
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> First </div>
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.5.3
+*/
+/*
+  Flexing one item in Vertical box
+
+  Markup:
+  <div class="vertical-box" style="background-color:#DDD; width: 95%;padding:8px; height: 300px;">
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> First </div>
+    <div class="flex-1" style="background-color:white; padding: 8px; margin-bottom: 4px;"> Second </div>
+    <div style="background-color:white; padding: 8px; margin-bottom: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.5.4
+*/
+/*
+  Flexing all items in Vertical box
+
+  Markup:
+  <div class="vertical-box" style="background-color:#DDD; width: 95%;padding:8px; height: 300px;">
+    <div class="flex-1" style="background-color:white; padding: 8px; margin-bottom: 4px;"> First </div>
+    <div class="flex-2" style="background-color:white; padding: 8px; margin-bottom: 4px;"> Second </div>
+    <div class="flex-3" style="background-color:white; padding: 8px; margin-bottom: 4px;"> Third </div>
+  </div>
+
+  Styleguide 6.5.5
+*/
+/*
+  Fullbleed body
+
+  Markup:
+  <div class="vertical-box" style="background-color:#DDD; width: 95%;padding:8px; height: 300px;">
+    <div class="flex-1" style="background-color:white; padding: 8px; margin-bottom: 4px;"> Fullbleed </div>
+  </div>
+
+  Styleguide 6.5.6
+*/
+
+/*
+Non-Flexbox Layouts
+
+This offers only Horizontal Alignment Options.
+There are four align options for placing block level UI elements. Block level elements
+inclyde div, section etc. Span and img are not covered directly.
+They should be contained in a div where these alignment options are applied.
+
+Below are examples of aligning divs directly and aligning images contained within divs.
+
+.align-left - Aligns the element to the left of the container
+.align-right - Aligns the element to the right of the container
+.align-horizontal-center - aligns the element to the center of the container
+.align-inherit - aligns items based on parent container alignment
+
+Markup:
+<div style="width: 95%; height: 50px; background-color:#DDD; padding: 10px; margin-bottom: 10px;">
+ <div class="{{modifier_class}}">
+   <strong>Block Text</strong>
+ </div>
+</div>
+<div style="width: 95%; height: 50px; background-color:#DDD; padding: 10px;">
+ <div class="{{modifier_class}}">
+   <img src="http://upload.wikimedia.org/wikipedia/commons/e/e5/Coursera_logo.PNG"
+    style="max-width: 100px; max-height: 30px">
+ </div>
+</div>
+
+Styleguide 6.6
+*/
+
+.align-left
+  text-align left
+
+.align-horizontal-center
+  text-align center
+
+.align-right
+  text-align right
+
+.align-inherit
+  text-align inherit
