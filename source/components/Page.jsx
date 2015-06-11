@@ -24,6 +24,10 @@ var Body = React.createClass({
             </div>
           </div>
         </div>
+        <div className="space-200"/>
+        <div className="item-container horizontal-box align-items-center">
+          <h2 className="light-text">What would that have meant for early life forms?</h2>
+        </div>
 
         <div className="item-container">
           <div style={{backgroundColor: bgc}} className="text-box light-text">
@@ -60,7 +64,7 @@ var Body = React.createClass({
           </div>
         </div>
 
-        <div style={{backgroundImage: 'url(img/pillow_lava.jpg)', height: '800px', backgroundSize: '100%'}}>
+        <div style={{backgroundImage: 'url(img/pillow_lava.jpg)', height: '800px', backgroundSize: '100%'}} >
           <div className="item-container">
             <div style={{backgroundColor: bgcOp}} className="text-box light-text">
               <div>So pillow lava, lime stones and sand stones, remnants of these sorts of rocks and the isua in rocks, suggest that there was liquid water on the early Earth, at least by 3.8 billion years ago, and probably before. There's other evidence as well. But, the point about this, evidence is it shows that the early Earth might have been quite similar to the present day Earth, in the sense that there were bodies of liquid water available for life to emerge in possibly oceans. </div>
@@ -74,31 +78,61 @@ var Body = React.createClass({
           </div>
         </div>
 
-        <div style={{backgroundImage: 'url(img/crust.png)', height: '800px', backgroundSize: '100%'}}>
-          <div className="item-container horizontal-box align-items-center">
-            <div className="sans text-box">
-              <div>These sorts of processes if they were occurring then, suggest that the Earth at this time had similar geological processes that we're familiar with today. For example, plate tectonics. Plates being subducted, and then reformed and rewrought. And these sedimentary rocks being formed in the hydrological process. It was occurring on early Earth. And this suggests that the Earth also had internal layering. A differentiation of the different parts of the earth from the core, through the mantle, through to the crust. It suggests that the structure of the earth is much like present day earth. So, at least in terms of the presence of liquid water, the presence of land masses, the earth might have been somewhat similar to present day earth about 3.8 billion years ago. The sort of environment that we think might have been condusive to life. </div>
+        <div style={{backgroundImage: 'url(img/crust.jpg)', height: '800px', backgroundSize: '100%',   backgroundRepeat: 'no-repeat'}} />
+        <div className="item-container horizontal-box align-items-center">
+          <div className="text-box light-text">
+            <div>These sorts of processes if they were occurring then, suggest that the Earth at this time had similar geological processes that we're familiar with today. For example, plate tectonics. Plates being subducted, and then reformed and rewrought. And these sedimentary rocks being formed in the hydrological process. It was occurring on early Earth. </div>
+          </div>
+        </div>
+
+        <div style={{backgroundImage: 'url(img/earth_cutaway.jpg)', height: '800px', backgroundSize: '100%'}} >
+          <div className="item-container">
+            <div style={{backgroundColor: bgcOp}} className="text-box light-text">
+              <div>And this suggests that the Earth also had internal layering. A differentiation of the different parts of the earth from the core, through the mantle, through to the crust. It suggests that the structure of the earth is much like present day earth. So, at least in terms of the presence of liquid water, the presence of land masses, the earth might have been somewhat similar to present day earth about 3.8 billion years ago. The sort of environment that we think might have been condusive to life. </div>
             </div>
           </div>
         </div>
 
+        <div className="space-400"/>
+
         <div className="item-container horizontal-box align-items-center">
-          <div style={{backgroundColor: bgc}} className="text-box light-text">
-            <div>What about the other characteristics of the planet that are important for biology? Well, we can learn something about the early atmosphere, and we'll talk about Oxygen in the atmosphere later on in this course. </div>
-          </div>
+          <h2 className="light-text">What about the other characteristics of the planet that are important for biology? </h2>
         </div>
 
         <div className="item-container horizontal-box align-items-center">
           <div style={{backgroundColor: bgc}} className="text-box light-text">
-            <div>But the rock record tells us that if there was liquid water there, the temperature must have been within the range that's suitable for life. If there was liquid water, then the temperature must have been between freezing and maybe a few tens of degrees, to allow that liquid water to persist on the surface of the planet. That suggests that the temperature conditions were suitable for life. We know from the rock record that the early atmosphere only had trace quantities of oxygen. Today those, concentrations of oxygen at 21%. In the early history of the Earth, the oxygen concentrations would've been much less than .1%. And so the atmosphere was very different from today. Carbon dioxide would've been much more abundant. And there would have been more Methane as well. Some of that Methane, perhaps, being produced by biology. But, both Carbon Dioxide and Methane are greenhouse gases, and they would have contributed to warming the surface of the Earth at that time. </div>
+            <div>Well, we can learn something about the early atmosphere, and we'll talk about Oxygen in the atmosphere later on in this course. </div>
           </div>
+        </div>
+
+        <div style={{backgroundImage: 'url(img/early_earth.png)', height: '800px', backgroundSize: '100% 100%',   backgroundRepeat: 'no-repeat'}} >
+          <div className="item-container horizontal-box align-items-right">
+            <div style={{backgroundColor: bgcOp}} className="text-box light-text">
+              <div>But the rock record tells us that if there was liquid water there, the temperature must have been within the range that's suitable for life. If there was liquid water, then the temperature must have been between freezing and maybe a few tens of degrees, to allow that liquid water to persist on the surface of the planet. That suggests that the temperature conditions were suitable for life. We know from the rock record that the early atmosphere only had trace quantities of oxygen. Today those, concentrations of oxygen at 21%. In the early history of the Earth, the oxygen concentrations would've been much less than .1%. And so the atmosphere was very different from today. Carbon dioxide would've been much more abundant. And there would have been more Methane as well. Some of that Methane, perhaps, being produced by biology. But, both Carbon Dioxide and Methane are greenhouse gases, and they would have contributed to warming the surface of the Earth at that time. </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-400"/>
+
+        <div className="item-container horizontal-box align-items-center">
+          <h2 className="light-text">Why is this important?</h2>
         </div>
 
         <div className="item-container horizontal-box align-items-center">
           <div style={{backgroundColor: bgc}} className="text-box light-text">
-            <div>Why is this important? Well, we know that the sun was less luminous than it is today. The early sun was perhaps about 25% less luminous than it is today. Which means that it would have been imparting less heat to the Earth during that time. And one question that's been raised is, if the sun was less luminous than today, why didn't the Earth just freeze over? Why wasn't the Earth too cold for life and liquid water 3.8 billion years ago? And one answer to that paradox, that's being called the faint young sun paradox, is that carbon dioxide in the atmosphere and methane, 2 greenhouse gases, would have warmed up the surface of the Earth and provided conditions that would have been clement for liquid water. And that warming effect would have compensated for the cooler young sun, in that early history of the Earth. And so the presence of these gases may have been very important, not just for warming the earth and keeping it much, warmer than today. And, and providing the liquid water environments that early life would have required. But they might have also been important for life itself. Carbon dioxide would have provided a source of carbon for early lifeforms in the oceans and on the earl, early land masses. </div>
+            <div>Well, we know that the sun was less luminous than it is today. The early sun was perhaps about 25% less luminous than it is today. Which means that it would have been imparting less heat to the Earth during that time. And one question that's been raised is, if the sun was less luminous than today, why didn't the Earth just freeze over? Why wasn't the Earth too cold for life and liquid water 3.8 billion years ago? </div>
           </div>
         </div>
+
+        <div style={{backgroundImage: 'url(img/sun_horizon.jpg)', height: '800px', backgroundSize: '100% 100%',   backgroundRepeat: 'no-repeat'}} >
+          <div className="item-container horizontal-box align-items-right">
+            <div className="text-box light-text">
+              <div>And one answer to that paradox, that's being called the faint young sun paradox, is that carbon dioxide in the atmosphere and methane, 2 greenhouse gases, would have warmed up the surface of the Earth and provided conditions that would have been clement for liquid water. And that warming effect would have compensated for the cooler young sun, in that early history of the Earth. And so the presence of these gases may have been very important, not just for warming the earth and keeping it much, warmer than today. And, and providing the liquid water environments that early life would have required. But they might have also been important for life itself. Carbon dioxide would have provided a source of carbon for early lifeforms in the oceans and on the earl, early land masses. </div>
+            </div>
+          </div>
+        </div>
+
 
         <div className="item-container horizontal-box align-items-center">
           <div style={{backgroundColor: bgc}} className="text-box light-text">
@@ -113,14 +147,28 @@ var Body = React.createClass({
         </div>
 
         <div className="item-container horizontal-box align-items-center">
-          <div style={{backgroundColor: bgc}} className="text-box light-text">
-            <div>What would that have meant for early life forms? It probably would of, would of, it probably would have meant that they would have had to have shielded themselves. Perhaps by living inside rocks, or living beneath layers of microbes that would have protected them from the ultraviolet radiation. Microbial mats, those top layers of microbes would have acted as sacrificial layers, to protect the microbes underneath from the intense ultraviolet radiation. So this could've been one factor that was very different on the early earth. Some people have speculated that the high concentrations of methane in the atmosphere of the early earth might have reacted with sunlight and formed a hydrocarbon smog. And that smog of complex organic carbons, could have streamed out ultraviolet radiation. So there may have been other ways on early earth in which that intense ultraviolet radiation was screened out. But in the worst case scenario, the UV radiation would have been 1000 times higher than today. This would have been a challenge, for early life. </div>
-          </div>
+          <h2 className="light-text">What would that have meant for early life forms?</h2>
         </div>
 
         <div className="item-container horizontal-box align-items-center">
           <div style={{backgroundColor: bgc}} className="text-box light-text">
-            <div>Another challenge that was very prevalent on early Earth was higher, numbers of asteroid and comet impacts on the surface of the early Earth. We know that there was a large number of impacts between about 4.1 and 3.8 billion years ago. A much higher rate of impact than on the surface of present day Earth. Perhaps many orders of magnitudes, many tens of times higher than the present day Earth. How do we know that? Well we know that by looking at the moon. The moon preserves a record of impacts from the early solar system. And the large number of craters that you can see on the moon, that you can see with your own eye, by looking up at the moon in the night sky, you can see those craters. They are the evidence of intense bombardment in the early history of our solar system. And we call this period, the late heavy bombardment. It would have been a period that was very challenging for life. Because those impacts would have heated up habitats. Probably made some places too hot for life to have been able to tolerate the physical conditions caused by asteroid and comet impacts. So the emergence of life had to, occur in this very challenging environment of, heavy asteroid and comet impacts. </div>
+            <div>It probably would of, would of, it probably would have meant that they would have had to have shielded themselves. Perhaps by living inside rocks, or living beneath layers of microbes that would have protected them from the ultraviolet radiation. Microbial mats, those top layers of microbes would have acted as sacrificial layers, to protect the microbes underneath from the intense ultraviolet radiation. So this could've been one factor that was very different on the early earth. Some people have speculated that the high concentrations of methane in the atmosphere of the early earth might have reacted with sunlight and formed a hydrocarbon smog. And that smog of complex organic carbons, could have streamed out ultraviolet radiation. So there may have been other ways on early earth in which that intense ultraviolet radiation was screened out. But in the worst case scenario, the UV radiation would have been 1000 times higher than today. This would have been a challenge, for early life. </div>
+          </div>
+        </div>
+
+        <div style={{backgroundImage: 'url(img/asteroid_impact.jpg)', height: '800px', backgroundSize: '100% 100%',   backgroundRepeat: 'no-repeat'}} >
+          <div className="item-container horizontal-box align-items-right">
+            <div style={{backgroundColor: bgcOp}} className="text-box light-text">
+              <div>Another challenge that was very prevalent on early Earth was higher, numbers of asteroid and comet impacts on the surface of the early Earth. We know that there was a large number of impacts between about 4.1 and 3.8 billion years ago. A much higher rate of impact than on the surface of present day Earth. Perhaps many orders of magnitudes, many tens of times higher than the present day Earth. </div>
+            </div>
+          </div>
+        </div>
+
+        <div style={{backgroundImage: 'url(img/moon.jpg)', height: '1000px', backgroundSize: '100% 100%',   backgroundRepeat: 'no-repeat'}} >
+          <div className="item-container">
+            <div style={{backgroundColor: bgcOp}} className="text-box light-text">
+              <div>How do we know that? Well we know that by looking at the moon. The moon preserves a record of impacts from the early solar system. And the large number of craters that you can see on the moon, that you can see with your own eye, by looking up at the moon in the night sky, you can see those craters. They are the evidence of intense bombardment in the early history of our solar system. And we call this period, the late heavy bombardment. It would have been a period that was very challenging for life. Because those impacts would have heated up habitats. Probably made some places too hot for life to have been able to tolerate the physical conditions caused by asteroid and comet impacts. So the emergence of life had to, occur in this very challenging environment of, heavy asteroid and comet impacts. </div>
+            </div>
           </div>
         </div>
 
@@ -131,28 +179,25 @@ var Body = React.createClass({
         </div>
 
         <div className="item-container horizontal-box align-items-center">
-          <div style={{backgroundColor: bgc}} className="text-box light-text">
-            <div>So what have we learnt? </div>
-          </div>
+          <h2 className="light-text">So what have we learnt?</h2>
         </div>
 
         <div className="item-container horizontal-box align-items-center">
-          <div style={{backgroundColor: bgc}} className="text-box light-text">
+          <div className="sans text-box light-text">
             <div>We've learnt that the geological record gives us our main clues about the conditions of early Earth. </div>
           </div>
-        </div>
-
-        <div className="item-container horizontal-box align-items-center">
-          <div style={{backgroundColor: bgc}} className="text-box light-text">
+          <div className="sans text-box light-text">
             <div>We've learned that over 10% of that record is missing. But nevertheless, there are ancient rocks about 3.8 billion years old, some slightly older. That give us clues as to what the early conditions were like. We've learned that the Earth has some features that are strangely familiar to us. There would have been oceans. Areas of continental land masses as well, much like present day Earth. We've also learned that things are very different as well, the atmosphere was very different. Low concentrations of oxygen, higher concentrations of carbon dioxide, and methane, which might have been important for climate at that time.</div>
           </div>
-        </div>
-
-        <div className="item-container horizontal-box align-items-center">
-          <div style={{backgroundColor: bgc}} className="text-box light-text">
+          <div className="sans text-box light-text">
             <div>We've learned that the conditions for life would have been quite challenging. For example, higher levels of ultraviolet radiation may have existed on the early Earth. And also, much higher levels of asteroid and comet bombardment that would have provided a challenge for early life trying to emerge in these early habitats. But nevertheless, these environments were now clement enough for the origin and emergence of life.</div>
           </div>
         </div>
+
+        <div className="item-container horizontal-box align-items-center">
+        </div>
+
+        <div className="item-container horizontal-box align-items-center" />
       </div>
     );
   }
